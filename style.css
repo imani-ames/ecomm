@@ -236,6 +236,7 @@ li {
     padding: 1.6rem;
     overflow: hidden;
     z-index: 1;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.15);
 }
 
 .advert-box img{
@@ -248,16 +249,17 @@ li {
 }
 
 .advert-box:nth-child(1) {
-    background-color: #e9edc9;
+   background-color: #d4a373;
 }
 
 .advert-box:nth-child(2) {
-    background-color: #e9edc9;
+    background-color: #d4a373;
 }
 
 .advert-box:nth-child(3) {
-    background-color: #e9edc9;
+    background-color: #d4a373;
 }
+
 
 .advert-box .dotted {
     position: relative;
@@ -279,11 +281,13 @@ li {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .advert-box .content h4 {
     font-size: 2rem;
     font-weight: 500;
+    color: #fff;
 }
 
 .title {
@@ -331,5 +335,36 @@ li {
     border-bottom-left-radius: 10px;
     animation-duration: 0.25s;
     cursor:pointer;
+}
 
+.product-header {
+    position: relative;
+    height: 35rem;
+    transition: all 300ms ease-in-out;
+    z-index: 0;
+}
+
+.product-header img {
+    height: 100%;
+}
+
+.product-footer {
+    padding: 2rem 1.6rem 1.6rem 1.6rem;
+}
+
+.product-footer h3 {
+    font-size: 2.2rem;
+}
+
+.rating {
+    color: #a4161a;
+}
+
+.product-footer .price {
+    font-size: 2rem;
+}
+
+.product:hover .product-header::after {
+    content: "";
+    position: absolute;
 }
