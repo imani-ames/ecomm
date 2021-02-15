@@ -396,7 +396,7 @@ li {
 .product-banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 50rem;
+    height: 45.1rem;
     background-color: #ccd5ae;
 }
 
