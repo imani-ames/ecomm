@@ -12,13 +12,13 @@ html {
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    background-color: #fefae0;
     color: #333;
     position: relative;
     z-index: 1; 
+    background-color: #fefae0;
 }
 
 h1,
@@ -65,11 +65,17 @@ li {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background-color: #d4a373;
+}
+
+.header .hero-img {
+    max-width: 100%;
+    background-size: cover;
 }
 
 .nav {
     padding: 1.6rem 0;
+    background-color: #fff;
+
 }
 
 .navigation {
@@ -80,6 +86,7 @@ li {
 
 .logo h1 {
     font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 .top-nav {
@@ -89,10 +96,46 @@ li {
 .nav-list {
     display: flex;
     align-items: center;
+    letter-spacing: 1.5px;
 }
 
 .nav-item:not(:last-child) {
     margin-right: 0.5rem;
+}
+
+.nav-link {
+    transition: 0.4s;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+}
+
+.nav-link::after {
+	position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 100%;
+  left: 0;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link:hover {
+    color: #7f5539;
+}
+
+.nav-item:hover .nav-link::after {
+	
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 .nav-link:link,
@@ -101,8 +144,8 @@ li {
     transition: all 300ms ease-in-out;
 }
 
-.nav-link.icon {
-    font-size: 3rem;
+.nav-link i {
+    font-size: 2.5rem;
 }
 
 .hamburger {
@@ -111,6 +154,7 @@ li {
 
 .cart-icon {
     display: none;
+    font-size: 2px;
 }
 
 @media only screen and (max-width: 777px) {
@@ -175,17 +219,10 @@ li {
 
 }
 
-.header .hero-img {
-    position: absolute;
-    bottom: -15%;
-    right: 9%;
-    height: 65rem;
-    object-fit: contain;
-}
 
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 34%;
     transform: translate(15%, -50%);
 }
 
@@ -196,26 +233,37 @@ li {
     color: #e63946;
 }
 
-.hero-content .discount {
-    color: #e63946;
-}
 
 .hero-content h1 span {
-    font-size: 6rem;
-    font-weight: 700;
+    font-size: 9rem;
+    font-weight: 800;
     display: block;
     line-height: 1;
-    text-shadow: 3px 3px 0 #f1f1f1, 4px 4px 0 #f1f1f1;
+    color: #ffff;
 }
+.discount-container {
+    background-color: #9e2a2b;
+    padding: 2rem;
+    margin-top: 6rem;
+    text-align: center;
+} 
+
+.discount {
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-size: 3rem;
+ }
 
 .btn {
     display: inline-block;
-    background-color: #84a59d;
+    background-color: #7f5539;
     padding: 1.2rem 4rem;
     color: #fff;
     font-weight: 600;
     margin-top: 3rem;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .section {
@@ -314,8 +362,8 @@ li {
 
 .product {
     height: 48rem;
-    background-color: #d4a373;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.15);
+    background-color: #ffff;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.05);
     border-radius: 1rem;
     text-align: center;
     transition: all 300ms ease-in-out;
@@ -362,18 +410,18 @@ li {
 
 .product-header .icons {
     position: absolute;
-    top: 50%;
-    left: 7%;
+    top: 70%;
+    right: 7%;
 }
 
 .product-header .icons span {
-    line-height: 2rem;
+    line-height: 1rem;
     cursor: pointer;
-    background-color: #ccd5ae;
-    font-size: 2rem;
+    background-color: #d4a373;
+    font-size: 1.5rem;
     display: block;
     border-radius: 50%;
-    padding: 1.5rem 1.6rem;
+    padding: 1rem 1rem;
     margin-right: 1rem;
     margin-bottom: 0.5rem;
     transition: all 300ms ease-in-out;
@@ -381,8 +429,8 @@ li {
 
 
 .product-header .icons span:hover {
-    background: #e9edc9;
-    color: #333;
+    
+    color: #ffff;
 }
 
 .product:hover .icons {
@@ -443,7 +491,6 @@ li {
 }
 
 .footer {
-    background-color: #7f5539;
     padding: 6rem 1rem;
     line-height: 3rem;
 }
@@ -455,25 +502,36 @@ li {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    color: #fff;
+    color: #333;
 }
 
 .footer-center a:link,
 .footer-center a:visited{
     display: block;
-    color: #edf6f9;
+    color: #333;
     font-size: 1.4rem;
     transition: 0.6s;
 }
 
 .footer-center a:hover {
-    color: #fff;
+    color: #7f5539;
 }
 
 .footer-center h3 {
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1rem;
+}
+
+.footer-center h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.footer-container .footer-center .footer__social {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 1rem;
 }
 
 .section .top {
