@@ -18,7 +18,6 @@ body {
     color: #333;
     position: relative;
     z-index: 1; 
-    background-color: #fefae0;
 }
 
 h1,
@@ -237,6 +236,7 @@ li {
 .hero-content h1 span {
     font-size: 9rem;
     font-weight: 600;
+    margin-bottom: 3rem;
     display: block;
     line-height: 1;
     color: #ffff;
@@ -261,7 +261,7 @@ li {
     padding: 1.2rem 4rem;
     color: #fff;
     font-weight: 600;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
@@ -361,7 +361,7 @@ li {
 }
 
 .product {
-    height: 48rem;
+    height: 55rem;
     background-color: #ffff;
     box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.05);
     border-radius: 1rem;
@@ -419,18 +419,18 @@ li {
     cursor: pointer;
     background-color: #d4a373;
     font-size: 1.5rem;
-    display: block;
     border-radius: 50%;
     padding: 1rem 1rem;
     margin-right: 1rem;
     margin-bottom: 0.5rem;
     transition: all 300ms ease-in-out;
+    display: none;
 }
 
 
 .product-header .icons span:hover {
-    
     color: #ffff;
+    display: block;
 }
 
 .product:hover .icons {
